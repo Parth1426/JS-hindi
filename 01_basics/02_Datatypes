@@ -1,0 +1,14 @@
+"use strict";//treat all js code as newer version
+
+
+//alert(3+3) // gives error as we are using node js, not browser
+
+console.log(3+3)
+//code must be readable
+console.log("parth")
+
+let name = "hitesh"
+let age =23
+let login = gdd
+
+// number =>

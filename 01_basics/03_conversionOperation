@@ -1,0 +1,26 @@
+let score = "234b"
+
+console.log(typeof score);//output is string 
+
+let valueinnumber= Number(score)
+//converts string into numbers
+console.log(typeof valueinnumber);//output is number
+console.log( valueinnumber);//output is it is not a number
+
+//"33" => 33
+// 33adf => NaN
+// true => 1;false => 0
+
+let islogged=1
+let boollog= Boolean(islogged)
+console.log(boollog);
+
+// 1=>true 0=>false
+//""=> false
+//"hitesh"=>true
+
+let i=33
+let j= String(i)
+console.log(j);
+console.log(typeof j)
+

@@ -3,12 +3,26 @@
 
 //alert(3+3) // gives error as we are using node js, not browser
 
-console.log(3+3)
+//console.log(3+3)
 //code must be readable
 console.log("parth")
 
 let name = "hitesh"
 let age =23
 let login = gdd
+let state//undefined
+let happy = null // null value is assigned
 
-// number =>
+// number => range is 2 to the power 53
+// bigint for big numbers
+// string => used with " "
+// boolea => true/false
+// null => standalone value
+// undefined =>
+//symbol => unique
+
+//object
+
+console.log(typeof "parth")//output is string
+console.log(typeof null)//output is object
+console.log(typeof undefined)//output is undefined

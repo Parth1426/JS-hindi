@@ -24,3 +24,29 @@
 
 //console.log("2"==2);//true
 console.log("2"===2);//false checks datatype also
+
+//***************************************************************************
+//stack(primitive)  heap(non primitive) memory
+let myname= "parth"
+let yoursname=myname
+yoursname="sharyu"
+
+//console.log(yoursname)
+//console.log(myname)
+//in stack memory copy is been made so if the name changes actual value does not change it remains same 
+
+
+
+let userone ={
+    email: "parth@google.com",
+    upi : "userybl",
+}
+
+let usertwo=userone
+
+usertwo.email = "sharyu@dr"
+
+console.log(userone.email);//sharyu@dr
+console.log(usertwo.email);//sharyu@dr
+
+// here in heap direct reference is given to the particular name if it changes then others having same references also changes

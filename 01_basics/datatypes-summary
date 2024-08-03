@@ -1,0 +1,31 @@
+//primitve
+
+// 7 types: string, number, boolean , null, undefined , symbol, bigint
+cont score =100
+cont islogged= false
+const temp = null
+
+const id = Symbol('123')
+const anotherid = Symbol('123')
+
+console.log(id===anotherid)//false
+
+
+//Reference type(non primitive)
+
+
+
+//Array, objects ,functions
+
+const heros = ["shaltiman","naagraj", "doga"];
+let myObj = {
+    name: "parth",
+    age: 20,
+}
+
+const myfunction= function(){
+    console.log("hello world")
+}
+console.log(typeof myObj);//output is object
+console.log(typeof myfunction);//outout is function
+console.log(typeof heros);//output is object

@@ -58,6 +58,43 @@ function loginmessage(username)
     return `${username} just logged in` 
 }
 
-console.log(loginmessage());
+//console.log(loginmessage());
+
+// function calculatecartprice(...num1){
+//     return num1
+// }
+//console.log(calculatecartprice(200,400,500))//[ 200, 400, 500 ]
+
+function calculatecartprice(val1,val2,...num1){
+    return num1
+}
+console.log(calculatecartprice(200,400,500,2000))//[ 500, 2000 ],val1 nd val2 will take the values of 200 nd 400
+
+
+const user = {
+    username : "parth",
+    price : 199
+}
+function handleobject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+
+//handleobject(user)//username is parth and price is 199
+
+// handleobject({
+//     username : "sam",//username is sam and price is 399
+//     price: 399
+// })
+
+
+const mynewarray = [200,400,100,600]
+
+function returnsecondvalue(getarray){
+    return getarray[1]
+}
+//console.log(returnsecondvalue(mynewarray));//400
+
+console.log(returnsecondvalue([200,400,500,1000]))//400
+
 
 

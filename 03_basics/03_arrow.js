@@ -18,7 +18,7 @@ const user ={
 // function chai(){
 //     //console.log(this)
 //     let username="parth"
-//     //console.log(this.username);//undefined//this does not give context for the functions only wrks for functions
+//     //console.log(this.username);//undefined//this does not give context for the functions only wrks for objects
 // }
 // chai()
 

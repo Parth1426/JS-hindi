@@ -218,3 +218,66 @@ function endgame(){
 
 }
 ```
+
+## project 6 solution
+```
+javascript
+
+//generate a random color
+
+const randomColor = function(){
+  const hex = "0123456789ABCDEF"
+  let color ='#'
+  for(let i=0;i<6;i++){
+    color += hex[Math.floor(Math.random()*16)]
+  }
+  return color
+};
+let intervalid
+const startChangingColor = function(){
+  if(!intervalid)
+  {
+    
+   intervalid=setInterval(changeBgcolor,1000)
+  }
+  function changeBgcolor(){
+    document.body.style.backgroundColor=randomColor();
+  }
+  
+}
+const stopChangingColor = function(){
+  clearInterval(intervalid)
+  intervalid = null;
+}
+document.querySelector('#start').addEventListener('click',startChangingColor);
+
+
+document.querySelector('#stop').addEventListener('click',stopChangingColor);
+
+
+```
+
+## project 5 solution
+```javascript
+const insert =document.getElementById('insert');
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.Key===' '?'Space':e.Key}</td>
+    <td>${e.KeyCode}</td>
+    <td>${e.Code}</td>
+  </tr>
+
+</table>
+  </div>
+  `
+   ;
+});
+```

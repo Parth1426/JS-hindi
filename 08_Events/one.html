@@ -1,0 +1,96 @@
+//here we will study abt eventpropogation, bubbling nd capturing 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: black;color: aqua;">
+
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/19529126/pexels-photo-19529126/free-photo-of-portrait-of-perching-owl.jpeg?auto=compress&cs=tinysrgb&w=600"
+                 alt="">
+            </li>
+            <li>
+                <img width="200px" id="photoshop" src="https://images.pexels.com/photos/3468543/pexels-photo-3468543.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="photoshop">
+
+            </li>
+            <li>
+                <a style="color: aliceblue;" href="https://google.com"
+                id="google">Google</a>
+
+            </li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // document.getElementById("owl").onclick = function(){
+    //     alert("owl clicked")
+    // }
+    //event listners must be applied becz they give the abilityof propogation
+
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     alert("owl clicked again")
+    // })
+
+    //attachEvent
+    //jQuery - on
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log(e);
+    // },false)
+
+    //type,timestap , defaultprevented
+    //target , toElement, srcElement , currentTarget,
+    // clientX,clientY, screenX , screenY
+    //altkey , ctrlkey , shiftkey , keyCode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside ul");
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked");
+    // },false)
+    //event propogation is nothing but bubbling up when we use false from down to up
+    //that is why console is giving us first owl nd the click ul
+    //default value is cosidered as false here
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside ul");
+    // },true)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked");
+    // },true)
+    //here when parameter is true then capturing takes place
+    //which is from top to bottom noew first iamges will get print then owl  
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside ul");
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // },false)
+    //now tis will stop the propogation nd only prints the current values on console
+
+
+     document.getElementById('google').addEventListener('click',function(e){
+         console.log("google clicked");
+         e.preventDefault()
+     },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        let removeit= e.target.parentNode
+        removeit.remove();//removes the images from the webpage
+    })
+
+
+</script>
+</html>
